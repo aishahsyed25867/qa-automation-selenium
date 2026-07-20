@@ -15,9 +15,17 @@ An end-to-end automated UI regression test for e-commerce login functionality us
 
 ## 🧪 Test Case Coverage
 
-| Test ID | Scenario | Execution Steps | Expected Result | Pass/Fail Condition |
-| :--- | :--- | :--- | :--- | :--- |
-| **TC-001** | Valid User Login | 1. Launch Chrome<br>2. Navigate to SauceDemo<br>3. Input valid credentials<br>4. Click Login | Redirected to `/inventory.html` | Script asserts URL contains `inventory.html` |
+#### 🔹 TC-001: Valid User Login
+* **Target Application:** SauceDemo (`https://www.saucedemo.com/`)
+* **Test Objective:** Verify that a standard user can log in with valid credentials and navigate to the inventory page.
+* **Execution Steps:**
+  1. Launch Chrome Browser.
+  2. Navigate to SauceDemo login page.
+  3. Enter username (`standard_user`) and password (`secret_sauce`).
+  4. Click the **Login** button.
+  5. Assert the post-login URL contains `inventory.html`.
+* **Expected Result:** User redirected to `/inventory.html`.
+* **Status:** PASS
 
 ---
 
@@ -39,12 +47,12 @@ An end-to-end automated UI regression test for e-commerce login functionality us
    ```bash
    python3 -m venv venv
    source venv/bin/activate  # On macOS/Linux
-   pip install selenium
+   pip install selenium pytest
    ```
 
 3. **Run the test script:**
    ```bash
-   python test_login.py
+   python3 test_login.py
    ```
 
 ---
